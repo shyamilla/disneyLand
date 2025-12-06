@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    background: url('https://images.pexels.com/photos/13071331/pexels-photo-13071331.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Confirmation Container */
+.confirmation-container {
+    background-color: rgba(255, 255, 255, 0.96);
+    padding: 30px 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 30px;
+    color: #0077c8;
+    margin-bottom: 22px;
+}
+
+/* Confirmation Text */
+p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Emphasized line */
+p.total-amount {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #0077c8;
+}
+
+/* Buttons/Links */
+a {
+    display: inline-block;
+    margin: 12px 6px 0 6px;
+    padding: 10px 16px;
+    background-color: #0077c8;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #005fa3;
+}
+
+/* Responsive for small devices */
+@media screen and (max-width: 480px) {
+    .confirmation-container {
+        padding: 22px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    a {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,208 @@
+/* 🌍 Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url('https://img.freepik.com/free-photo/3d-cartoon-night-sky_23-2151705360.jpg?ga=GA1.1.902646006.1753678617&semt=ais_hybrid&w=740&q=80') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 📦 Container */
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.form-contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* 📐 Equal section sizing */
+.contact-section-left,
+.contact-section-right,
+.form-section {
+    flex: 1;
+    height: 450px;
+}
+
+/* 💌 Card styling */
+.contact-card {
+    background: transparent;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.icon {
+    width: 200px;
+    height: 300px;
+    margin: 0 auto 20px;
+    animation: popIn 1s ease;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.contact-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.contact-card p {
+    font-size: 16px;
+    color: blue;
+}
+
+/* ✍️ Form */
+.form-section {
+    background: transparent;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #222;
+    text-shadow: 1px 1px 2px white;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+textarea {
+    height: 100px;
+}
+
+.submit-btn {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #005fa3;
+}
+
+/* 🔔 Alerts */
+.alert {
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+    body {
+        overflow: auto;
+    }
+
+    .form-contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-section-left,
+    .contact-section-right,
+    .form-section {
+        width: 90%;
+        height: auto;
+    }
+
+    label {
+        font-size: 22px;
+    }
+}
+
+/* 🧷 General Button Styling */
+button {
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 128); /* Disney-inspired yellow */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background-color: #ffb300;
+    transform: scale(1.05);
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* 🎈 Card button spacing */
+.contact-card button {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}

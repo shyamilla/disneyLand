@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    background: black no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+/* Page Title */
+h2 {
+    font-size: 36px;
+    color: #8080ff;
+    margin-bottom: 32px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      
+}
+
+/* Page Container */
+.attraction-page {
+    width: 100%;
+    padding: 20px;
+    margin-top: 0 !important; /* ✅ Ensure no space below header */
+}
+
+
+
+
+/* Main Layout */
+.attraction-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Attraction Row */
+.attraction-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.attraction-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Media (Image or Video) */
+.attraction-media {
+    flex: 1;
+    max-width: 50%;
+}
+
+.attraction-media img,
+.attraction-media video {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    display: block;
+}
+
+/* Text Content */
+.attraction-content {
+    flex: 1;
+    padding: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.attraction-content h3 {
+    font-size: 28px;
+    color: #00ffff;
+    margin-bottom: 10px;
+}
+
+.attraction-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .attraction-row,
+    .attraction-row.reverse {
+        flex-direction: column;
+    }
+
+    .attraction-media,
+    .attraction-content {
+        max-width: 100%;
+    }
+
+    .attraction-content {
+        text-align: center;
+    }
+}

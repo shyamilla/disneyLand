@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Body Styling */
+body {
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    background: url('https://cdn.registerdisney.go.com/v4/asset/bundler/DISNEY/v4/images/v1/disney-background-web.webp') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    
+}
+
+/* Heading */
+h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 24px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Ticket Page Container */
+.ticket-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Ticket Container */
+.ticket-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Individual Ticket Cards */
+.ticket-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 320px;
+  
+    text-align: center;
+    padding: 20px;
+   
+    transition: transform 0.3s ease;
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+}
+
+.ticket-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.ticket-card h3 {
+    color: #0077c8;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ticket-card p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.ticket-card .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+/* Book Now Button */
+.book-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077c8;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.book-btn:hover {
+    background-color: #005fa3;
+}
+
+/* Booking Form Styling (if needed on same page) */
+.booking-form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.booking-form input[type="email"],
+.booking-form input[type="date"],
+.booking-form input[type="tel"],
+.booking-form input[type="number"],
+.booking-form input[type="text"],
+.booking-form input[type="password"] {
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+    background-color: #fff;
+}
+
+.booking-form input:focus {
+    border-color: #0077cc;
+    outline: none;
+}
+
+/* Total Amount Text */
+.booking-form p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Book Button */
+.booking-form button {
+    width: 100%;
+    background-color: #0077c8;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #005fa3;
+}
+
+/* Error & Success Messages */
+.error-message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ff4c4c;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success-message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .booking-form {
+        width: 95%;
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
